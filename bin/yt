@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Downloads the embedded video on any web page straight to the desktop.
+#
+# youtube-dl: https://rg3.github.io/youtube-dl/
+
+cd ~/Wideo/YouTube && youtube-dl "$1"
