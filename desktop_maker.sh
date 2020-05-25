@@ -1,9 +1,10 @@
 #!/bin/bash
 
-readonly SHORTCUTS_DIR=~/shortcuts
+readonly USERNAME=ukasz09 # because normal $USERNAME and ~ dont work in script 
+readonly SHORTCUTS_DIR=/home/$USERNAME/shortcuts
 
 make_shortcuts_dir() {
-    if [! -d "$SHORTCUTS_DIR" ]; then
+    if [ ! -d "$SHORTCUTS_DIR" ]; then
         mkdir $SHORTCUTS_DIR
         echo "Making shourtcuts dir"
     fi
