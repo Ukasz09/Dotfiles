@@ -4,4 +4,5 @@
 #
 # youtube-dl: https://rg3.github.io/youtube-dl/
 
-cd ~/Wideo/YouTube && youtube-dl --write-sub --sub-lang en "$1"
+readonly USERNAME=ukasz09
+cd /home/$USERNAME/Muzyka/YouTubeAudio && youtube-dl -x --audio-format mp3 --audio-quality 0 "$1"
