@@ -2,15 +2,14 @@
 #
 # Full download website, including all needed media, converting links and some others.
 #
-
-readonly USERNAME=ukasz09
-cd /home/$USERNAME/Dokumenty/Websites 
+HOME=$(eval echo ~${SUDO_USER})
+cd ${HOME}/Dokumenty/Websites
 wget \
-     --recursive \
-     --page-requisites \
-     --html-extension \
-     --convert-links \
-     --restrict-file-names=windows \
-     --domains website.org \
-     --no-parent \
-         "$1"
+--recursive \
+--page-requisites \
+--html-extension \
+--convert-links \
+--restrict-file-names=windows \
+--domains website.org \
+--no-parent \
+"$1"

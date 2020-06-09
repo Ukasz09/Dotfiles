@@ -4,4 +4,5 @@
 #
 # youtube-dl: https://rg3.github.io/youtube-dl/
 
-cd ~/Wideo/YouTube && youtube-dl --write-sub --sub-lang en "$1"
+HOME=$(eval echo ~${SUDO_USER})
+cd ${HOME}/Wideo/YouTube && youtube-dl --write-sub --sub-lang en "$1"

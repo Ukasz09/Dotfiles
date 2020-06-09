@@ -1,3 +1,3 @@
 #!/bin/bash
-readonly USERNAME=ukasz09 # because normal $USERNAME dont work in script 
-cp ./aliases/.bash_aliases /home/$USERNAME/
+HOME=$(eval echo ~${SUDO_USER})
+cp ./aliases/.bash_aliases ${HOME}

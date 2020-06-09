@@ -1,18 +1,18 @@
 #!/bin/bash
 
-readonly USERNAME=ukasz09 # because normal $USERNAME and ~ dont work in script 
-readonly SHORTCUTS_DIR=/home/$USERNAME/shortcuts
+HOME=$(eval echo ~${SUDO_USER})
+SHORTCUTS_DIR=${HOME}/shortcuts
 
 make_shortcuts_dir() {
-    if [ ! -d "$SHORTCUTS_DIR" ]; then
-        mkdir $SHORTCUTS_DIR
+    if [ ! -d "${SHORTCUTS_DIR}" ]; then
+        mkdir ${SHORTCUTS_DIR}
         echo "Making shourtcuts dir"
     fi
 }
 
 copying_shortcuts() {
     cd ./.desktop/
-    cp *.sh $SHORTCUTS_DIR
+    cp *.sh ${SHORTCUTS_DIR}
     cp *.desktop /usr/share/applications
     echo "Copying shourtcuts"
 }
