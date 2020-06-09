@@ -1,7 +1,7 @@
 #!/bin/bash
 
-readonly USERNAME=ukasz09 # because normal $USERNAME and ~ dont work in script 
-readonly SYNC_DIR=/home/$USERNAME/Dokumenty/OneDrive-PWr
+HOME=$(eval echo ~${SUDO_USER})
+readonly SYNC_DIR=${HOME}/Dokumenty/OneDrive-PWr
 
 # dependencies
 sudo apt install libcurl4-openssl-dev
@@ -15,8 +15,8 @@ make
 sudo make install
 
 # config
-mkdir -p /home/$USERNAME/.config/onedrive
-cp ./config /home/$USERNAME/.config/onedrive/config
-cat /dev/null > /home/$USERNAME/.config/onedrive/config
-echo "sync_dir = \"$SYNC_DIR\"" > /home/$USERNAME/.config/onedrive/config
-echo "skip_file = \".*|~*\"" > /home/$USERNAME/.config/onedrive/config
+mkdir -p ${HOME}/.config/onedrive
+cp ./config ${HOME}/.config/onedrive/config
+cat /dev/null > ${HOME}/.config/onedrive/config
+echo "sync_dir = \"$SYNC_DIR\"" > ${HOME}/.config/onedrive/config
+echo "skip_file = \".*|~*\"" > ${HOME}/.config/onedrive/config
