@@ -1,4 +1,3 @@
-# aliases
 alias pdftext="lowriter --convert-to pdf"
 alias listen-ports="sudo lsof -i -P -n | grep LISTEN"
 alias path="echo -e ${PATH//:/\\\\n}"
@@ -10,17 +9,38 @@ alias day="dconf write /org/gnome/settings-daemon/plugins/color/night-light-enab
 alias cpwd="pwd | xclip -sel c"
 alias copy="xclip -sel c"
 alias ihist="history | sort -r | fzf | sed -e 's/[0-9 ]\+//'"
+alias ytmp3="cd ~/Muzyka/YouTubeAudio && youtube-dl -x --audio-format mp3 --audio-quality 0"
+alias yt="cd ~/Wideo/YouTube && youtube-dl --write-sub --sub-lang en "
+alias htmlget="cd ~/Dokumenty/Websites
+wget \
+--recursive \
+--page-requisites \
+--html-extension \
+--convert-links \
+--restrict-file-names=windows \
+--domains website.org \
+--no-parent \
+"
 
 # localizations
 alias githubdir="cd /home/ukasz09/Dokumenty/Dev/GitHub"
 alias tmpdir="cd /home/ukasz09/Dokumenty/TMP"
 alias semdir="cd /home/ukasz09/Dokumenty/Semestr_IV"
 
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias treeless="tree -C | less -R"
+
 # git
-alias gitlog="git log --oneline"
-alias gitstat="git status -u"
+alias fgitlog="git log --graph --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) %C(cyan)<%an>%Creset' --abbrev-commit"
+alias gitlog="git log --pretty --oneline --all --graph"
+alias fgitstat="git status -u"
+alias gitstat="git status -s"
+alias gitcom="git commit -m"
+alias gitadd="git add ."
 
 function gitpush() { git push origin "$(git branch | grep -e "^[\*]" | awk '{print $2}')"; }
 
 function gitpull() { git pull origin "$(git branch | grep -e "^[\*]" | awk '{print $2}')"; }
-

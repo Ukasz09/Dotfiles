@@ -1,8 +1,0 @@
-#!/bin/bash
-#
-# Downloads the embedded video on any web page straight to the desktop.
-#
-# youtube-dl: https://rg3.github.io/youtube-dl/
-
-HOME=$(eval echo ~${SUDO_USER})
-cd ${HOME}/Wideo/YouTube && youtube-dl --write-sub --sub-lang en "$1"

@@ -1,7 +1,0 @@
-#!/bin/bash
-#
-# Downloads the embedded video on any web page straight to the desktop.
-#
-# youtube-dl: https://rg3.github.io/youtube-dl/
-HOME=$(eval echo ~${SUDO_USER})
-cd ${HOME}/Muzyka/YouTubeAudio && youtube-dl -x --audio-format mp3 --audio-quality 0 "$1"
