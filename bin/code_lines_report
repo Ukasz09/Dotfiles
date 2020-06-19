@@ -1,5 +1,9 @@
 #!/bin/bash
 
+count_lines(){
+    fdfind -e $1 -x wc -l | awk '{total += $1} END {print total}'
+}
+
 declare -A languages
 languages+=( ["Java"]="java" ["Python"]="py" ["C++"]="cpp" ["C#"]="cs" ["JavaScript"]="js" ["Scala"]="scala" ["Shell"]="sh" ["PostgreSql"]="pgsql" ["OCaml"]="ml" ["Assembly"]="asm")
 
