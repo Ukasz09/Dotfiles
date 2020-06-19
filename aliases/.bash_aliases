@@ -44,3 +44,6 @@ alias gitadd="git add ."
 function gitpush() { git push origin "$(git branch | grep -e "^[\*]" | awk '{print $2}')"; }
 
 function gitpull() { git pull origin "$(git branch | grep -e "^[\*]" | awk '{print $2}')"; }
+
+# git status bar in bash
+source ~/gitstatus/gitstatus.prompt.sh
