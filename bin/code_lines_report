@@ -1,0 +1,12 @@
+#!/bin/bash
+
+declare -A languages
+languages+=( ["Java"]="java" ["Python"]="py" ["C++"]="cpp" ["C#"]="cs" ["JavaScript"]="js" ["Scala"]="scala" ["Shell"]="sh" ["PostgreSql"]="pgsql" ["OCaml"]="ml" ["Assembly"]="asm")
+
+for key in ${!languages[@]}; do
+    qty=$(count_lines ${languages[${key}]})
+    if [ -z "${qty}" ]; then
+        qty=0
+    fi
+    echo ${key} ": " ${qty}
+done | sort -r -t : -n -k 2

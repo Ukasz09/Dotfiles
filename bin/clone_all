@@ -1,0 +1,33 @@
+#!/bin/bash
+
+PAGE=1
+CURL_RESULTS_FROM_PAGE=""
+USERNAME=$1
+
+init_repos_folder(){
+    mkdir -p ${USERNAME}
+    cd ${USERNAME}
+}
+
+curl_repos_list_from_page(){
+    CURL_RESULTS_FROM_PAGE=$(curl -s 'https://api.github.com/users/'${USERNAME}'/repos?page='$PAGE'&per_page=100' | grep -e 'git_url*' | cut -d \" -f 4)
+}
+
+clone_repos_from_results(){
+    CURL_RESULTS_FROM_PAGE="echo ${CURL_RESULTS_FROM_PAGE}"
+    ${CURL_RESULTS_FROM_PAGE} | xargs -d ' ' -L1 git clone
+}
+
+clone_all_repos(){
+    curl_repos_list_from_page
+    while ! [ -z "${CURL_RESULTS_FROM_PAGE}" ]; do
+        clone_repos_from_results
+        PAGE=$((PAGE+1))
+        curl_repos_list_from_page
+    done
+    echo "Cloned all repos"
+}
+
+echo $USERNAME
+init_repos_folder
+clone_all_repos
