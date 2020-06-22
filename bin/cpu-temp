@@ -1,0 +1,8 @@
+#!/bin/bash
+
+get_temp(){
+    perl -ple '$_ /= 1000' </sys/class/thermal/thermal_zone${1}/temp
+}
+
+echo "Core 0: " $(get_temp 0)
+echo "Core 1: " $(get_temp 1)
