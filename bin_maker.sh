@@ -21,7 +21,7 @@ make_websites_dir() {
 # -------------------------------------------------------------------------------------------------------------------- #
 copy_bin() {
     cd ./bin
-    cp * /usr/bin/
+    cp * /usr/bin/ # zamienic na /usr/local/bin 
 }
 
 make_websites_dir
