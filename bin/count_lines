@@ -1,3 +1,3 @@
 #!/bin/bash
 
-fdfind -e $1 -x wc -l | awk '{total += $1} END {print total}'
+fdfind -e "${1}" -x wc -l | awk '{total += $1} END {print total}'

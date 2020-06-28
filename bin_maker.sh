@@ -1,29 +1,19 @@
 #!/bin/bash
 HOME=$(eval echo ~${SUDO_USER})
-YT_DIR=${HOME}/Wideo/YouTube
-WEB_DIR=${HOME}/Dokumenty/Websites
+WEB_DIR="${HOME}/Dokumenty/Websites"
+YT_DIR="${HOME}/Wideo/YouTube"
 
 # -------------------------------------------------------------------------------------------------------------------- #
-make_yt_dir() {
-    if [ ! -d "${YT_DIR}" ]; then
-        mkdir ${YT_DIR}
-        echo "Making YouTube dir"
-    fi
+make_directories(){
+    mkdir -p "${YT_DIR}"
+    mkdir -p "${WEB_DIR}"
+    echo "Directories made correctly"
 }
 
-make_websites_dir() {
-    if [ ! -d "${WEB_DIR}" ]; then
-        mkdir ${WEB_DIR}
-        echo "Making Websites dir"
-    fi
-}
-
-# -------------------------------------------------------------------------------------------------------------------- #
 copy_bin() {
-    cd ./bin
-    cp * /usr/bin/ # zamienic na /usr/local/bin 
+    cd "./bin"
+    cp * "/usr/local/bin/"
 }
 
-make_websites_dir
-make_yt_dir
+make_directories
 copy_bin

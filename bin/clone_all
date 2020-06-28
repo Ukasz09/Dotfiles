@@ -2,13 +2,14 @@
 
 PAGE=1
 CURL_RESULTS_FROM_PAGE=""
-USERNAME=$1
+USERNAME="${1}"
 
 init_repos_folder(){
     mkdir -p ${USERNAME}
     cd ${USERNAME}
 }
 
+# take into consideration that github api allow only to 60 queries per hour
 curl_repos_list_from_page(){
     CURL_RESULTS_FROM_PAGE=$(curl -s 'https://api.github.com/users/'${USERNAME}'/repos?page='$PAGE'&per_page=100' | grep -e 'git_url*' | cut -d \" -f 4)
 }
@@ -28,6 +29,6 @@ clone_all_repos(){
     echo "Cloned all repos"
 }
 
-echo $USERNAME
+echo "${USERNAME}"
 init_repos_folder
 clone_all_repos

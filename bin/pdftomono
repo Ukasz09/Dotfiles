@@ -1,15 +1,14 @@
 #!/bin/bash
 
-MONO_FILE_NAME=${1}"_mono"
-
+MONO_FILE_NAME="${1}_mono"
 
 gs \
- -sOutputFile=${1} \
- -sDEVICE=pdfwrite \
- -sColorConversionStrategy=Gray \
- -dProcessColorModel=/DeviceGray \
- -dCompatibilityLevel=1.4 \
- -dNOPAUSE \
- -dBATCH \
- ${MONO_FILE_NAME}.pdf
+-sOutputFile=${1} \
+-sDEVICE=pdfwrite \
+-sColorConversionStrategy=Gray \
+-dProcessColorModel=/DeviceGray \
+-dCompatibilityLevel=1.4 \
+-dNOPAUSE \
+-dBATCH \
+"${MONO_FILE_NAME}.pdf"
 
