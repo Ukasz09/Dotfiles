@@ -1,2 +1,2 @@
 #!/bin/bash
-nautilus /home/ukasz09/Dokumenty/OneDrive-PWr
+nautilus /home/ukasz09/Documents/OneDrive-PWr

@@ -5,4 +5,4 @@ Terminal=false
 Exec=/home/ukasz09/shortcuts/run_tmp.sh
 Name=TmpFiles
 Comment=Shortcut for temporary files folder.
-Icon=/home/ukasz09/.icons/Papirus-Dark/64x64/places/folder-brown-recent.svg
+Icon=/home/ukasz09/.icons/Papirus-Dark/64x64/places/folder-violet-recent.svg

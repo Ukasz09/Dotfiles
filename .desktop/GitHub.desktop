@@ -5,4 +5,4 @@ Terminal=false
 Exec=/home/ukasz09/shortcuts/run_github.sh
 Name=Dev_GitHub
 Comment=Shortcut for GitHub dev folder.
-Icon=/home/ukasz09/.icons/Papirus-Dark/64x64/places/folder-brown-github.svg
+Icon=/home/ukasz09/.icons/Papirus-Dark/64x64/places/folder-violet-github.svg

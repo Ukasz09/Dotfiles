@@ -1,7 +1,7 @@
 #!/bin/bash
 HOME=$(eval echo ~${SUDO_USER})
-WEB_DIR="${HOME}/Dokumenty/Websites"
-YT_DIR="${HOME}/Wideo/YouTube"
+WEB_DIR="${HOME}/Documents/Websites"
+YT_DIR="${HOME}/Videos/Downloads"
 
 # -------------------------------------------------------------------------------------------------------------------- #
 make_directories(){

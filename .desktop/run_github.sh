@@ -1,2 +1,2 @@
 #!/bin/bash
-nautilus /home/ukasz09/Dokumenty/Dev/GitHub
+nautilus /home/ukasz09/dev/GitHub

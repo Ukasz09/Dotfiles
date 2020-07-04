@@ -1,2 +1,2 @@
 #!/bin/bash
-nautilus /home/ukasz09/Dokumenty/Semestr_IV
+nautilus /home/ukasz09/Documents/OneDrive-PWr/Uczelnia/Semestr_IV

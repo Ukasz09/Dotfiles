@@ -3,11 +3,11 @@ HOME=$(eval echo ~${SUDO_USER})
 
 install_one_drive(){
     # https://github.com/skilion/onedrive
-    readonly SYNC_DIR=${HOME}/Dokumenty/OneDrive-PWr
+    readonly SYNC_DIR=${HOME}/Documents/OneDrive-PWr
     
     # dependencies
-    sudo apt install libcurl4-openssl-dev
-    sudo apt install libsqlite3-dev
+    sudo apt-get install libcurl4-openssl-dev
+    sudo apt-get install libsqlite3-dev
     sudo snap install --classic dmd && sudo snap install --classic dub
     
     # app
@@ -27,35 +27,35 @@ install_one_drive(){
 # ad command
 install_advanced_touch(){
     # https://github.com/tanrax/terminal-AdvancedNewFile
-    pip3 install advance-touch
+    sudo pip3 install advance-touch
 }
 
 install_yt(){
-    pip install --upgrade youtube_dl
+    sudo pip install --upgrade youtube_dl
 }
 
 # ag command
 install_silver_search(){
     # https://github.com/ggreer/the_silver_searcher
-    apt install silversearcher-ag
+    sudo apt-get install silversearcher-ag
 }
 
 # fdfind command
 install_fd_find(){
     # https://github.com/sharkdp/fd
-    apt install fd-find
+    sudo apt-get install fd-find
 }
 
 install_bash_git_status(){
     # https://github.com/romkatv/gitstatus
     git clone --depth=1 https://github.com/romkatv/gitstatus.git "${HOME}/gitstatus"
-    echo 'source ~/gitstatus/gitstatus.prompt.sh' >> "${HOME}/Dokumenty/Dev/GitHub/Dotfiles/aliases/.bash_aliases"
+    echo 'source ~/gitstatus/gitstatus.prompt.sh' >> "${HOME}/.bash_aliases"
 }
 
 # shellcheck command
 install_shellcheck(){
     # https://github.com/koalaman/shellcheck
-    sudo apt install shellcheck
+    sudo apt-get install shellcheck
 }
 
 # goto command
@@ -68,9 +68,42 @@ install_goto(){
     rm -r ./goto
 }
 
+install_snap(){
+sudo apt-get install snap
+sudo apt-get install snapd
+}
+
+install_sdkman(){
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+}
+
+install_sdk_langs(){
+sdk install gradle
+sdk install java
+sdk install sbt
+sdk install scala
+sdk install springboot
+}
+
+install_other_langs(){
+sudo apt-get install npm
+sudo npm install -g @angular/cli
+sudo apt-get install python
+sudo apt-get install nodejs
+sudo apt-get install python3-pip
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+}
+
 # ------------------------------------------------------------------- #
+install_sdkman
+install_sdk_langs
+install_other_langs
+install_snap
 install_one_drive
 install_advanced_touch
+install_fd_find
 install_yt
 install_silver_search
 install_bash_git_status
