@@ -1,3 +1,4 @@
+export LS_COLORS="$(vivid generate ayu)"
 alias pdftext="lowriter --convert-to pdf"
 alias listen-ports="sudo lsof -i -P -n | grep LISTEN"
 alias path="echo -e ${PATH//:/\\\\n}"
@@ -11,6 +12,7 @@ alias copy="tr -d '\n' | xclip -sel c"
 alias ihist="history | sort -r | fzf | sed -e 's/[0-9 ]\+//'"
 alias ytmp3="cd ~/Music/Downloads && youtube-dl -x --audio-format mp3 --audio-quality 0"
 alias yt="cd ~/Videos/Downloads && youtube-dl --write-sub --sub-lang en "
+alias up="sudo apt-get update | sudo apt-get upgrade -y"
 
 # localizations
 alias ..="cd .."

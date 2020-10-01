@@ -1,4 +1,7 @@
 #!/bin/bash
 HOME=$(eval echo ~${SUDO_USER})
 cp -r .icons ${HOME}
-sudo ./.icons/Tela-icon-theme/install.sh
+git clone https://github.com/vinceliuice/Tela-icon-theme.git
+cd Tela-icon-theme
+sudo ./Tela-icon-theme/install.sh -a
+rm -r ./Tela-icon-theme
