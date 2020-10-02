@@ -12,7 +12,7 @@ alias copy="tr -d '\n' | xclip -sel c"
 alias ihist="history | sort -r | fzf | sed -e 's/[0-9 ]\+//'"
 alias ytmp3="cd ~/Music/Downloads && youtube-dl -x --audio-format mp3 --audio-quality 0"
 alias yt="cd ~/Videos/Downloads && youtube-dl --write-sub --sub-lang en "
-alias up="sudo apt-get update | sudo apt-get upgrade -y"
+alias up="sudo apt-get update | sudo apt-get upgrade -y | sudo snap refresh"
 alias please="sudo"
 
 # localizations
