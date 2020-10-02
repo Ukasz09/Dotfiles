@@ -86,6 +86,10 @@ sdk install scala
 sdk install springboot
 }
 
+install_tree(){
+sudo snap install tree
+}
+
 install_other_langs(){
 sudo apt-get install npm
 sudo npm install -g @angular/cli

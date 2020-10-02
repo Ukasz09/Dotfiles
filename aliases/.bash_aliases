@@ -13,6 +13,7 @@ alias ihist="history | sort -r | fzf | sed -e 's/[0-9 ]\+//'"
 alias ytmp3="cd ~/Music/Downloads && youtube-dl -x --audio-format mp3 --audio-quality 0"
 alias yt="cd ~/Videos/Downloads && youtube-dl --write-sub --sub-lang en "
 alias up="sudo apt-get update | sudo apt-get upgrade -y"
+alias please="sudo"
 
 # localizations
 alias ..="cd .."
@@ -32,7 +33,7 @@ alias gitstat="git status -s"
 alias gitcom="git commit -m"
 alias gitadd="git add ."
 alias gitunadd="git reset"
-
+alias gitdiff="git diff"
 
 function gitpush() { git push origin "$(git branch | grep -e "^[\*]" | awk '{print $2}')"; }
 
@@ -40,3 +41,4 @@ function gitpull() { git pull origin "$(git branch | grep -e "^[\*]" | awk '{pri
 
 # git status bar in bash
 source ~/gitstatus/gitstatus.prompt.sh
+
