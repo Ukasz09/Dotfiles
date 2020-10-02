@@ -90,6 +90,19 @@ install_tree(){
 sudo snap install tree
 }
 
+install_speed_test(){
+# https://github.com/sindresorhus/speed-test
+sudo npm install --global speed-test
+}
+
+install_neofetch(){
+sudo apt install neofetch
+}
+
+install_trash(){
+sudo npm install --global trash-cli
+}
+
 install_other_langs(){
 sudo apt-get install npm
 sudo npm install -g @angular/cli
@@ -113,3 +126,6 @@ install_silver_search
 install_bash_git_status
 install_shellcheck
 install_goto
+install_tree
+install_neofetch
+install_speed_test
