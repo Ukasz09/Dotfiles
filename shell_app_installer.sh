@@ -113,6 +113,10 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 }
 
+install_htop(){
+sudo apt install htop
+}
+
 # ------------------------------------------------------------------- #
 install_sdkman
 install_sdk_langs
@@ -129,3 +133,4 @@ install_goto
 install_tree
 install_neofetch
 install_speed_test
+install_htop
