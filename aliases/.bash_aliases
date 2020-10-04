@@ -14,6 +14,7 @@ alias ytmp3="cd ~/Music/Downloads && youtube-dl -x --audio-format mp3 --audio-qu
 alias yt="cd ~/Videos/Downloads && youtube-dl --write-sub --sub-lang en "
 alias please="sudo"
 alias sublime="/opt/sublime_text/sublime_text"
+alias l="ls -CFA"
 
 function up(){
 sudo apt-get update
