@@ -117,6 +117,14 @@ install_htop(){
 sudo apt install htop
 }
 
+install_code_lines_counter(){
+        git clone https://github.com/Ukasz09/Code-lines-counter.git
+        cd Code-lines-counter/
+        make install
+        cd ..
+        rm -r Code-lines-counter/
+}
+
 # ------------------------------------------------------------------- #
 install_sdkman
 install_sdk_langs
@@ -134,3 +142,4 @@ install_tree
 install_neofetch
 install_speed_test
 install_htop
+install_code_lines_counter
