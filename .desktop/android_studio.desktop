@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Android Studio
+GenericName=android_studio
+Comment=Android Studio - IDE for android
+Exec=/home/ukasz09/Dev_Tools/android-studio/bin/studio.sh
+Icon=/home/ukasz09/Dev_Tools/android-studio/bin/studio.svg
+Terminal=false
+Categories=Development;
+StartupNotify=true
