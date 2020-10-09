@@ -1,0 +1,33 @@
+#!/bin/bash
+
+HOME=$(eval echo ~${SUDO_USER})
+DOWNLOAD_LOCALIZATION="${HOME}/Dokumenty/Websites"
+
+download_sites(){
+    for SITE in $@; do
+        DOMAIN=$(get_domain ${SITE})
+        mkdir -p "${DOMAIN}"
+        cd "${DOMAIN}"
+        
+        wget \
+        --recursive \
+        --page-requisites \
+        --adjust-extension \
+        --span-hosts \
+        --convert-links \
+        --restrict-file-names=windows \
+        --no-parent \
+        --domains ${DOMAIN} \
+        ${SITE}
+        
+        cd ..
+    done
+}
+
+get_domain(){
+    echo $(echo "${1}" | cut -d "/" -f3)
+}
+
+cd ${DOWNLOAD_LOCALIZATION}
+echo /usr/share/applications
+#download_sites $@
