@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HOME=$(eval echo ~${SUDO_USER})
-DOWNLOAD_LOCALIZATION="${HOME}/Dokumenty/Websites"
+DOWNLOAD_LOCALIZATION="${HOME}/Documents/Websites"
 
 download_sites(){
     for SITE in $@; do
