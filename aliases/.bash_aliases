@@ -1,8 +1,9 @@
 export LS_COLORS="$(vivid generate ayu)"
 alias pdftext="lowriter --convert-to pdf"
-alias listen-ports="sudo lsof -i -P -n | grep LISTEN"
+alias list-ports="sudo lsof -i -P -n | grep LISTEN"
 alias path="echo -e ${PATH//:/\\\\n}"
-alias all-services="systemctl list-unit-files"
+alias fshow-services="systemctl list-unit-files"
+alias show-services="sudo initctl list"
 alias tardo="tar -czvf"
 alias untardo="tar -xzvf"
 alias night="dconf write /org/gnome/settings-daemon/plugins/color/night-light-enabled true"
@@ -17,12 +18,12 @@ alias sublime="/opt/sublime_text/sublime_text"
 alias l="ls -CFA"
 alias ll='ls -alFh'
 alias df="df -h"
+alias rot13="tr a-zA-Z n-za-mN-ZA-M"
 
 function up(){
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo snap refresh
-sdk upgrade
 }
 
 # localizations

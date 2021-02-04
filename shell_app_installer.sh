@@ -4,18 +4,18 @@ HOME=$(eval echo ~${SUDO_USER})
 install_one_drive(){
     # https://github.com/skilion/onedrive
     readonly SYNC_DIR=${HOME}/Documents/OneDrive-PWr
-    
+
     # dependencies
     sudo apt-get install libcurl4-openssl-dev
     sudo apt-get install libsqlite3-dev
     sudo snap install --classic dmd && sudo snap install --classic dub
-    
+
     # app
     git clone https://github.com/skilion/onedrive.git
     cd onedrive
     make
     sudo make install
-    
+
     # config
     mkdir -p ${HOME}/.config/onedrive
     cp ./config ${HOME}/.config/onedrive/config
@@ -103,6 +103,11 @@ install_trash(){
 sudo npm install --global trash-cli
 }
 
+install_stacer(){
+  sudo add-apt-repository ppa:oguzhaninan/stacer
+  sudo apt install stacer
+}
+
 install_other_langs(){
 sudo apt-get install npm
 sudo npm install -g @angular/cli
@@ -115,6 +120,10 @@ python get-pip.py
 
 install_htop(){
 sudo apt install htop
+}
+
+install_postman(){
+sudo snap install postman
 }
 
 install_code_lines_counter(){
@@ -143,3 +152,5 @@ install_neofetch
 install_speed_test
 install_htop
 install_code_lines_counter
+install_postman
+install_stacer

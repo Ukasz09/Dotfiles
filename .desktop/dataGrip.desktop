@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Data Grip
+GenericName=data_grip
+Comment=Data Grip - IDE for datbase management provided by JetBrains
+Exec=/home/ukasz09/Dev_Tools/DataGrip-2020.3.1/bin/datagrip.sh
+Icon=/home/ukasz09/Dev_Tools/DataGrip-2020.3.1/bin/datagrip.svg
+Terminal=false
+Categories=Development;
+StartupNotify=true
