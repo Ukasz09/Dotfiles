@@ -23,6 +23,10 @@ alias docker="sudo docker"
 alias list-emulators="~/Android/Sdk/tools/emulator -list-avds"
 alias run-emulator="~/Android/Sdk/emulator/emulator -avd"
 
+function scan-devices(){
+for host in /sys/class/scsi_host/*; do echo "- - -" | sudo tee $host/scan; ls /dev/sd* ; done
+}
+
 function up(){
 sudo apt-get update
 sudo apt-get upgrade -y
