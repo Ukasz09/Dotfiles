@@ -19,11 +19,15 @@ alias l="ls -CFA"
 alias ll='ls -alFh'
 alias df="df -h"
 alias rot13="tr a-zA-Z n-za-mN-ZA-M"
+alias docker="sudo docker"
+alias list-emulators="~/Android/Sdk/tools/emulator -list-avds"
+alias run-emulator="~/Android/Sdk/emulator/emulator -avd"
 
 function up(){
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo snap refresh
+sudo flatpak update
 }
 
 # localizations

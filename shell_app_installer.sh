@@ -134,6 +134,11 @@ install_code_lines_counter(){
         rm -r Code-lines-counter/
 }
 
+install_others(){
+sudo apt-get install blueman
+sudo npm install --global yarn
+}
+
 # ------------------------------------------------------------------- #
 install_sdkman
 install_sdk_langs
@@ -154,3 +159,4 @@ install_htop
 install_code_lines_counter
 install_postman
 install_stacer
+install_others
